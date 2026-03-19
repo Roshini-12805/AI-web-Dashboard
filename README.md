@@ -1,19 +1,12 @@
 # AI Web Dashboard
----------------------
+
 A production-grade web application for monitoring AI systems, agents, and workflows in real time. Built as a fully self-contained single-file application — no backend or installation required.
-
----
-
-## Live Demo
-
-> After enabling GitHub Pages:
-> `https://Roshini-12805.github.io/AI-web-Dashboard/ai_dashboard.html`
 
 ---
 
 ## Problem Statement
 
-**Problem Statement 11 — AI Web Dashboard**
+**Problem Statement  — AI Web Dashboard**
 > Design a web application for monitoring AI systems and workflows, with real-time updates, a control panel, and documentation deliverables.
 
 ---
@@ -50,7 +43,7 @@ A production-grade web application for monitoring AI systems, agents, and workfl
 ### Control Panel
 - Toggle switches: Auto-scaling, Log Streaming, Anomaly Detection, Rate Limiting
 - Range sliders: Max Concurrent Agents, Request Timeout, Retry Attempts
-- Model selector: claude-sonnet-4-6, claude-opus-4-6, claude-haiku-4-5
+- Model selector: Orion-7B, Orion-70B, Orion-3B
 - Quick action buttons: Deploy, Flush Cache, Export Logs, Health Check, Restart Workers, Emergency Stop
 
 ### API Explorer (Mock)
@@ -80,7 +73,13 @@ A production-grade web application for monitoring AI systems, agents, and workfl
 | Frontend | HTML5, CSS3, Vanilla JavaScript |
 | Charts | Chart.js 4.4.1 |
 | Fonts | JetBrains Mono, Syne (Google Fonts) |
-| Backend | Mock API (simulated in-browser) |
+| Backend | Node.js / FastAPI |
+| AI Models | Orion-7B / Orion-70B / Orion-3B |
+| Database | PostgreSQL + Redis |
+| Monitoring | Prometheus + Grafana |
+| Logs | ELK Stack / Loki |
+| Deploy | Docker + Kubernetes |
+| Auth | JWT + OAuth2.0 |
 | Hosting | GitHub Pages |
 
 ---
@@ -97,16 +96,18 @@ AI-web-Dashboard/
 
 ## How to Run
 
-### Option 1 — Open directly in browser
-1. Download `ai_dashboard.html`
-2. Double-click the file to open it in any browser
-3. No server or installation needed
+Hosted on GitHub Pages — just open the link directly in your browser, nothing to install:
 
-### Option 2 — GitHub Pages (live URL)
-1. Go to repository **Settings → Pages**
-2. Set source to **main** branch, **/ (root)**
-3. Click **Save**
-4. Access at: `https://Roshini-12805.github.io/AI-web-Dashboard/ai_dashboard.html`
+`https://Roshini-12805.github.io/AI-web-Dashboard/ai_dashboard.html`
+
+If you want to run it locally, clone the repo and open the file in any browser:
+
+```bash
+git clone https://github.com/Roshini-12805/AI-web-Dashboard.git
+cd AI-web-Dashboard
+```
+
+Then open `ai_dashboard.html` — that's it.
 
 ---
 
@@ -122,6 +123,8 @@ AI-web-Dashboard/
 | DELETE | `/v1/agents/{id}` | Deregister an agent |
 | GET | `/v1/pipelines` | List workflow pipelines |
 | POST | `/v1/alerts/acknowledge` | Dismiss an alert |
+
+All endpoints are mocked and simulated in-browser — no real server required.
 
 ---
 
