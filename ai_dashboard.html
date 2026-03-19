@@ -446,7 +446,7 @@ nav{flex:1;padding:12px 10px;overflow-y:auto;display:flex;flex-direction:column;
           <div id="alertsContainer">
             <div class="alert-card ac-crit"><div class="alert-icon-box aib-crit">⚠</div><div class="alert-body"><div class="at">Agent #7 timeout</div><div class="ad">No response for 120s · workflow-classifier</div><div class="atime">2 min ago</div></div><div class="alert-dismiss" onclick="this.parentNode.remove()">×</div></div>
             <div class="alert-card ac-warn"><div class="alert-icon-box aib-warn">⚡</div><div class="alert-body"><div class="at">High memory usage</div><div class="ad">embedding-model-v3 at 89% heap</div><div class="atime">8 min ago</div></div><div class="alert-dismiss" onclick="this.parentNode.remove()">×</div></div>
-            <div class="alert-card ac-info"><div class="alert-icon-box aib-info">ℹ</div><div class="alert-body"><div class="at">Model update available</div><div class="ad">claude-sonnet → 4.6 ready to deploy</div><div class="atime">14 min ago</div></div><div class="alert-dismiss" onclick="this.parentNode.remove()">×</div></div>
+            <div class="alert-card ac-info"><div class="alert-icon-box aib-info">ℹ</div><div class="alert-body"><div class="at">Model update available</div><div class="ad">Model v2.1 ready to deploy</div><div class="atime">14 min ago</div></div><div class="alert-dismiss" onclick="this.parentNode.remove()">×</div></div>
           </div>
         </div>
         <div class="card">
@@ -585,9 +585,9 @@ nav{flex:1;padding:12px 10px;overflow-y:auto;display:flex;flex-direction:column;
             <div class="control-item">
               <div class="ci-header"><span class="ci-title">Model</span></div>
               <select class="select-input" onchange="controlChange('model',this.value)">
-                <option>claude-sonnet-4-6</option>
-                <option>claude-opus-4-6</option>
-                <option>claude-haiku-4-5</option>
+                <option>Orion-7B</option>
+                <option>Orion-70B</option>
+                <option>Orion-3B</option>
               </select>
             </div>
           </div>
@@ -750,7 +750,7 @@ const API_ENDPOINTS = [
 const PIPELINE_STEPS = [
   {num:1,name:'Data Ingestion',detail:'Fetch leads from CRM API',status:'done',time:'0.8s'},
   {num:2,name:'Preprocessing',detail:'Clean & normalize fields',status:'done',time:'1.2s'},
-  {num:3,name:'Intent Classification',detail:'claude-sonnet · 312 records',status:'active',time:'running...'},
+  {num:3,name:'Intent Classification',detail:'Orion-7B · 312 records',status:'active',time:'running...'},
   {num:4,name:'Score & Rank',detail:'Weighted scoring model',status:'pending',time:'—'},
   {num:5,name:'CRM Update',detail:'Sync enriched data back',status:'pending',time:'—'},
   {num:6,name:'Notifications',detail:'Email/SMS trigger',status:'pending',time:'—'},
