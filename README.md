@@ -123,8 +123,6 @@ AI-web-Dashboard/
 | GET | `/v1/pipelines` | List workflow pipelines |
 | POST | `/v1/alerts/acknowledge` | Dismiss an alert |
 
-Base URL: `https://api.neuralops.internal/v1`
-
 ---
 
 ## Deliverables Checklist
